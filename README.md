@@ -70,6 +70,3 @@ docker ps
 
 ## This will show all the container, both active, inactive.
 dokcer ps -a
-
-## NOTE: IF YOU HAVE FACED ANY DIFFICULTIES TO RUN THE PROJECT IN YOUR LOCAL PLEASE FEEL FREE TO CONTACT WITH ME at  CONTACT DETAILS.
-## Email: mehadicse38@gmail.com
