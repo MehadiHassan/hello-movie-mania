@@ -1,0 +1,92 @@
+@import '../../../scss/variables';
+
+.genre-content {
+  .movie-grid-item {
+    .movie-inner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .add-to-my-watch-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        .idb-icon-inactive {
+          font-size: 40px;
+          color: rgb(255, 80, 80);
+        }
+
+        .idb-icon-active {
+          font-size: 40px;
+          color: $gold-tips;
+        }
+
+        .plus-icon {
+          color: $white;
+          position: absolute;
+          top: 9px;
+          left: 35%;
+        }
+
+        .check-mark-icon {
+          color: $black;
+          position: absolute;
+          top: 9px;
+          left: 35%;
+        }
+      }
+
+      .poster-image {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+
+      .name {
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: bold;
+          color: $cerulean;
+        }
+      }
+
+      .description {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .release-date {
+        color: $hippie-blue;
+      }
+
+      .popularity-water-mark {
+        display: flex;
+        position: absolute;
+        top: 7px;
+        background: $abbey !important;
+        color: $loblolly !important;
+        height: 30px;
+        width: 90px;
+        border-radius: 8px;
+        padding: 2px;
+        justify-content: space-around;
+
+        .popularity-icon {
+          color: $trinidad !important;
+        }
+      }
+    }
+  }
+}

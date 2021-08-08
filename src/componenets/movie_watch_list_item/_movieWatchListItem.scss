@@ -1,0 +1,130 @@
+@import '../../scss/variables';
+
+.movie-watch-list-item-container {
+  border-top: 2px solid $silver;
+  padding-top: 10px;
+  margin-bottom: 10px;
+
+  .movie-watch-list-content {
+    display: flex;
+
+    .poster-image-content {
+      .poster-image {
+        width: 98px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .movie-basic-info-container {
+      margin-left: 14px;
+
+      .movie-name {
+        color: $denim;
+        font-weight: bold;
+        font-size: 17px;
+        cursor: pointer;
+
+        &:hover {
+          color: $deluge;
+        }
+      }
+
+      .movie-released-and-gnere-info {
+        display: flex;
+
+        .released-year {
+          color: violet;
+        }
+
+        .movie-language {
+          &::before,
+          &::after {
+            color: $alto;
+            content: ' | ';
+          }
+        }
+
+        .movie-genre-info {
+          display: flex;
+          flex-wrap: wrap;
+
+          .genre-name {
+            color: turquoise;
+          }
+        }
+      }
+
+      .rating-and-popularity-info {
+        display: flex;
+
+        .rating-contents {
+          display: flex;
+          align-items: center;
+
+          .fa-star-icon {
+            color: rgb(202, 165, 45);
+            margin-top: -5px;
+          }
+        }
+
+        .popularity-contents {
+          display: flex;
+          margin-left: 2%;
+          align-items: center;
+
+          .popularity-value {
+            background: rgb(97, 199, 45);
+            font-weight: bold;
+            padding: 3px;
+            border-radius: 8px;
+          }
+        }
+      }
+
+      .movie-overview {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movie-watch-list-item-container {
+    .movie-watch-list-content {
+      flex-direction: column;
+
+      .movie-basic-info-container {
+        margin-left: 0;
+
+        .movie-released-and-gnere-info {
+          flex-direction: column;
+
+          .movie-language {
+            &::before,
+            &::after {
+              color: $alto;
+              content: '';
+            }
+          }
+        }
+
+        .rating-and-popularity-info {
+          .rating-contents {
+            display: flex;
+            align-items: center;
+
+            .fa-star-icon {
+              color: rgb(202, 165, 45);
+              margin-top: -5px;
+            }
+          }
+        }
+
+        .movie-overview {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

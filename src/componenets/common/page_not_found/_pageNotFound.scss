@@ -1,0 +1,9 @@
+@import '../../../scss/variables';
+
+.page-not-found-container {
+  background: $white;
+  color: $black;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}

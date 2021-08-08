@@ -1,0 +1,34 @@
+.movie-cast-item {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .cast-profile {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .cast-info {
+    display: inline-flex;
+    flex-direction: column;
+
+    .cast-name {
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(114, 112, 111);
+      }
+    }
+
+    .cast-postion {
+      color: #faabab;
+    }
+  }
+}

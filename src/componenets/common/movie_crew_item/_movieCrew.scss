@@ -1,0 +1,35 @@
+@import '../../../scss/variables';
+
+.movie-crew-item {
+  display: inline-flex;
+  justify-content: space-around;
+
+  .crew-profile {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .crew-info {
+    display: inline-flex;
+    flex-direction: column;
+
+    .crew-name {
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(114, 112, 111);
+      }
+    }
+
+    .crew-postion {
+      color: $rose-bud;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+# STAGE 1
+# pull the official base image for node
+FROM node:12-alpine AS build
+
+# set working directory  
+WORKDIR /movie-mania
+
+# add `/app/node_modules/.bin` to $PATH  
+ENV PATH /movie-mania/node_modules/.bin:$PATH
+ENV ENVIRONMENT development
+
+# install application dependencies
+COPY ["package.json", "package-lock.json*", "yarn.lock", "./"]
+
+RUN yarn
+
+# add app
+COPY . /movie-mania
+
+# will buld dev bundle
+RUN yarn build:dev
+
+
+# STAGE 2
+
+FROM node:12-alpine
+
+WORKDIR /movie-mania
+# If want to run in local, please comment out below code
+RUN npm install -g webserver.local
+
+COPY --from=build /movie-mania/bundle ./bundle
+
+# If want to run in local, please comment out below code
+EXPOSE 3000
+
+# If want to run in local, please comment out below code
+CMD webserver.local -d ./bundle

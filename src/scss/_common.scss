@@ -1,0 +1,119 @@
+@import './variables';
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: $emperor;
+  height: 100%;
+  height: -webkit-fill-available;
+
+  body {
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
+    color: #fff;
+    text-align: left;
+    background-color: $white;
+
+    --nav-bar-height: 70px;
+
+    article,
+    aside,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    nav,
+    section {
+      display: block;
+    }
+
+    #root {
+      height: 100%;
+    }
+
+    hr {
+      box-sizing: content-box;
+      height: 0;
+      overflow: visible;
+      margin: 0;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    label {
+      font-weight: 200;
+    }
+
+    .table-fixed {
+      width: 100%;
+
+      tbody {
+        min-height: 100px;
+        overflow-y: auto;
+        width: 100%;
+        max-height: 150px;
+      }
+
+      thead,
+      tbody,
+      tr,
+      td,
+      th {
+        display: block;
+      }
+
+      tbody {
+        tr {
+          clear: both;
+        }
+
+        td {
+          float: left;
+          width: 20%;
+        }
+      }
+
+      thead {
+        tr {
+          th {
+            float: left;
+            width: 20%;
+          }
+        }
+      }
+    }
+
+    .fade {
+      opacity: 0.5 !important;
+    }
+  }
+
+  .modal-header {
+    border: 0;
+    padding: 0;
+
+    h5 {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../scss/variables';
+
+.genre-content {
+  background: $white;
+  color: $black;
+  flex: 1;
+  margin-top: 76px;
+
+  .error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .movie-details-by-popularity {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    column-gap: 10px;
+    row-gap: 15px;
+    display: grid;
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .genre-content {
+    .movie-details-by-popularity {
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .genre-content {
+    .movie-details-by-popularity {
+      grid-template-columns: 100%;
+    }
+  }
+}

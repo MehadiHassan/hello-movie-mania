@@ -1,0 +1,12 @@
+@import '../../scss/variables';
+
+.movies-container {
+  background: $white;
+  color: $black;
+  flex: 1;
+  margin-top: 76px;
+
+  .genre-content {
+    min-height: 300px;
+  }
+}

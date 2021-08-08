@@ -1,0 +1,13 @@
+@import '../../../scss/variables';
+
+.genre-header {
+  .genre-name {
+    color: $nevada !important;
+    text-decoration: none;
+
+    &:hover {
+      color: $cape-cod !important;
+      text-decoration: underline;
+    }
+  }
+}

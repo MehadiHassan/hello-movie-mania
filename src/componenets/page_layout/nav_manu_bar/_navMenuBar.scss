@@ -1,0 +1,96 @@
+@import '../../../scss/variables';
+
+.custom-navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 8888;
+  box-shadow: 0 0 10px 0 rgb(0, 0, 0 / 35%);
+  padding: 0 0 0;
+
+  .navbar {
+    background-color: $blue-whale;
+    color: $white;
+
+    .navbar-brand {
+      height: 60px;
+
+      h3 {
+        color: $congress-blue;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 0.65;
+        font-family: 'Lobster', cursive;
+        position: relative;
+        animation: color-change 1s infinite;
+
+        &::before {
+          content: '\2807';
+          font-size: 40px;
+          position: absolute;
+          left: -12%;
+          top: 1px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        color: $mantis;
+        font-weight: 400;
+        text-transform: capitalize;
+        font-style: italic;
+        font-family: 'Mansalva', cursive;
+      }
+    }
+
+    .navbar-nav {
+      .watch-list {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .fa-reg-bookmark {
+          font-size: 23px;
+          margin-right: 4px;
+          color: rgb(255, 159, 103);
+        }
+
+        .watch-list-counter {
+          margin-left: 0.5rem;
+          background: rgb(245, 197, 24);
+          color: rgb(252, 237, 237);
+          padding: 0 0.4rem;
+          border-radius: 20px;
+          text-align: center;
+        }
+      }
+    }
+
+    .navbar-nav .nav-link {
+      color: $white !important;
+
+      &:hover {
+        background: rgb(1, 80, 117);
+        border-radius: 20px;
+      }
+    }
+
+    .navbar-toggler-icon {
+      background-image: url('../../../assets/images/hamberger-menu.png');
+    }
+
+    .navbar-toggler {
+      &:focus {
+        box-shadow: unset;
+      }
+    }
+  }
+}
+
+@keyframes color-change {
+  0% { color: $mantis; }
+  50% { color: $cerulian; }
+  100% { color: $congress-blue; }
+}

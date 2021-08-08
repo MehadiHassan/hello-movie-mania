@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.watch-list-container {
+  background: $white;
+  color: $black;
+  flex: 1;
+  margin-top: 76px;
+
+  .error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .title-section {
+    background-color: $galery;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
